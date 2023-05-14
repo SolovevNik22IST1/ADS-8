@@ -4,13 +4,13 @@ Train::Train(): countOp(0), first(nullptr) {}
 
 void Train::addCage(bool light) {
     if (first != nullptr) {
-        Cage* darkness;
-        darkness = new Cage;
-        darkness->light = light;
-        darkness->next = nullptr;
-        darkness->prev = last;
-        last->next = darkness;
-        last = darkness;
+        Cage* dark;
+        dark = new Cage;
+        dark->light = light;
+        dark->next = nullptr;
+        dark->prev = last;
+        last->next = dark;
+        last = dark;
     } else {
         first = new Cage;
         first->light = light;
